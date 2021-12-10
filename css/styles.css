@@ -1,0 +1,224 @@
+* {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v18/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v18/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+header {
+    position: relative;
+    width: 941px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.header-left {
+    position: absolute;
+    width: 301px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.header-right {
+    position: absolute;
+    width: 621px;
+    height: 100px;
+    left: 320px;
+    top: 0px;
+
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.header-elements {
+    position: absolute;
+    width: 245px;
+    height: 18px;
+    left: 80px;
+    top: 39px;
+
+    font-family: HelveticaNeue;
+    font-size: 15px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FFFFFF;
+}
+
+footer {
+    position: relative;
+    width: 941px;
+    height: 100px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.footer-elements {
+    position: absolute;
+    width: 245px;
+    height: 18px;
+    left: 81px;
+    top: 42px;
+
+    font-family: HelveticaNeue;
+    font-size: 15px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
+    color: #FFFFFF;
+}
+
+.grid-container {
+    position: relative;
+    width: 941px;
+    height: 530px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows: 50px 200px 200px 50px;
+    gap: 10px 20px;
+
+    overflow: hidden;
+}
+
+.text-box {
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.text-box-text {
+    position: relative;
+    width: 300.93px;
+    height: 156px;
+    left: 0px;
+    top: 20px;
+
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    line-height: 26px;
+    /* or 144% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.2px;
+
+    color: #484A4C;
+}
+
+h1 {
+    position: relative;
+    width: 300.93px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+
+    font-family: 'Source Sans Pro Bold';
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.2px;
+
+    color: #134880;
+}
+
+.picture-row-1 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    height: 200px;
+    direction: rtl;
+    white-space: nowrap;
+}
+
+.picture-row-2 {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    height: 200px;
+    direction: rtl;
+    white-space: nowrap;
+}
+
+.images {
+    display: inline;
+    height: 200px;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+
+.arrow {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 0px;
+    margin-bottom: 10px;
+    border: 1px solid #134880;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.arrow:hover{
+    background-color: #EEEEEE;
+    border: 2px solid #134880;
+}
+
+.arrows{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 3;
+}
+
+.arrow-img{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 16px;
+    margin: auto;
+}
