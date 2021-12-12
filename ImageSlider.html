@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Image slider</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/Slider.js"></script>
 </head>
 
 <body>
@@ -25,24 +27,24 @@
                 consequat.
             </div>
         </div>
-        <div class="picture-row-1">
-            <img class="images" src="Assets/slider-image-1.jpg" />
-            <img class="images" src="Assets/slider-image-2.jpg" />
-            <img class="images" src="Assets/slider-image-6.jpg" />
-            <img class="images" src="Assets/slider-image-4.jpg" />
-            <img class="images" src="Assets/slider-image-5.jpg" />
+        <div class="picture-row-1" id="picture-row-1">
+            <img class="images" id="img1" src="Assets/slider-image-1.jpg" />
+            <img class="images" id="img2" src="Assets/slider-image-2.jpg" />
+            <img class="images" id="img6" src="Assets/slider-image-6.jpg" />
+            <img class="images" id="img4" src="Assets/slider-image-4.jpg" />
+            <img class="images" id="img5" src="Assets/slider-image-5.jpg" />
         </div>
-        <div class="picture-row-2">
-            <img class="images" src="Assets/slider-image-3.jpg" />
-            <img class="images" src="Assets/slider-image-7.jpg" />
-            <img class="images" src="Assets/slider-image-8.jpg" />
-            <img class="images" src="Assets/slider-image-9.jpg" />
+        <div class="picture-row-2" id="picture-row-2">
+            <img class="images" id="img3" src="Assets/slider-image-3.jpg" />
+            <img class="images" id="img7" src="Assets/slider-image-7.jpg" />
+            <img class="images" id="img8" src="Assets/slider-image-8.jpg" />
+            <img class="images" id="img9" src="Assets/slider-image-9.jpg" />
         </div>
         <div class="arrows">
-            <button class="arrow">
+            <button id="left" class="arrow">
                 <img class="arrow-img" src="Assets/arrow-blue-left.png" />
             </button>
-            <button class="arrow">
+            <button  id="right" class="arrow">
                 <img class="arrow-img"  src="Assets/arrow-blue-right.png" />
             </button>
         </div>
