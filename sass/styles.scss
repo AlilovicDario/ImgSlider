@@ -1,0 +1,170 @@
+%headerChunks{
+    position: absolute;
+    height: 100px;
+    background: #DDDDDD;
+    border-radius: 0px 0px 5px 5px;
+}
+
+%hf{
+    position: relative;
+    width: 941px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+%hfElems{
+    position: absolute;
+    width: 245px;
+    height: 18px;
+    font-family: HelveticaNeue;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+%pictureRows {
+    height: 200px;
+    font-size: 0px;
+    direction: rtl;
+    white-space: nowrap;
+    clip-path: inset( 0vw 0vw 0vw -60vw );
+}
+
+@mixin sspText($fw, $fs, $lh, $h, $color) {
+    position: relative;
+    width: 300.93px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    
+    height: $h;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin buttonTheme($btnTheme){
+    background-position: center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 1px solid $btnTheme;
+    border-radius: 5px;
+}
+
+//---------
+
+* {
+    margin: 0px;
+}
+
+header {
+    @extend %hf;
+}
+
+.header-left {
+    @extend %headerChunks;
+    width: 301px;
+}
+
+.header-right {
+    @extend %headerChunks;
+    width: 621px;
+    left: 320px;
+}
+
+
+.header-elements {
+    @extend %hfElems;
+    left: 80px;
+    top: 39px;
+}
+
+footer {
+    @extend %hf;
+    background: #DDDDDD;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.footer-elements {
+    @extend %hfElems;
+    left: 81px;
+    top: 42px;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.grid-container {
+    @extend %hf;
+    height: 530px;
+    display: grid;
+    grid-template-columns: repeat(12, 60px);
+    grid-template-rows: 50px 200px 200px 50px;
+    gap: 10px 20px;
+}
+
+.text-box {
+    grid-column: 8 / 12;
+    grid-row: 2 / 4;
+}
+
+.text-box-text {
+    @include sspText(400, 18px, 26px, 156px, #484A4C);
+    align-items: center;
+    top: 20px;
+}
+
+h1 {
+    @include sspText(700, 32px, 37px, 120px, #134880);
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.picture-row-1 {
+    @extend %pictureRows;
+    grid-row: 2 / 4;
+    grid-column: 6 / 8;
+}
+
+.picture-row-2 {
+    @extend %pictureRows;
+    grid-row: 3 / 5;
+    grid-column: 4 / 6;
+}
+
+img {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.arrow-left {
+    background: url("../Assets/arrow-gray-left.png") no-repeat;
+    @include buttonTheme($btnTheme:#DDDDDD);
+}
+
+.arrow-left:hover{
+    background: url("../Assets/arrow-blue-left.png") no-repeat;
+    @include buttonTheme($btnTheme:#134880);
+}
+
+.arrow-right {
+    background: url("../Assets/arrow-gray-right.png") no-repeat;
+    @include buttonTheme($btnTheme:#DDDDDD);
+}
+
+.arrow-right:hover{
+    background: url("../Assets/arrow-blue-right.png") no-repeat;
+    @include buttonTheme($btnTheme:#134880);
+}
+
+.arrows{
+    grid-column: 7 / 8;
+    grid-row-start: 3;
+}
