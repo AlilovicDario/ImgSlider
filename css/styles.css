@@ -1,14 +1,14 @@
-.header-left, .header-right { position: absolute; height: 100px; background: #DDDDDD; border-radius: 0px 0px 5px 5px; }
+.header-chunks, .header-left, .header-right { position: absolute; height: 100px; background: #DDDDDD; border-radius: 0px 0px 5px 5px; }
 
-header, footer, .grid-container { position: relative; width: 941px; height: 100px; margin: 0 auto; }
+.hf, header, footer, .grid-container { position: relative; width: 941px; height: 100px; margin: 0 auto; }
 
-.header-elements, .footer-elements { position: absolute; width: 245px; height: 18px; font-family: HelveticaNeue; font-size: 15px; line-height: 18px; color: #FFFFFF; }
+.hfElems, .header-elements, .footer-elements { position: absolute; width: 245px; height: 18px; font-family: HelveticaNeue; font-size: 15px; line-height: 18px; color: #FFFFFF; }
 
-.picture-row-1, .picture-row-2 { height: 200px; font-size: 0px; direction: rtl; white-space: nowrap; clip-path: inset(0vw 0vw 0vw -60vw); }
+.picture-rows, .picture-row-1, .picture-row-2 { height: 200px; font-size: 0px; direction: rtl; white-space: nowrap; clip-path: inset(0vw 0vw 0vw -60vw); }
 
 * { margin: 0px; }
 
-.header-left { width: 301px; }
+.header-left { width: 300px; }
 
 .header-right { width: 621px; left: 320px; }
 
@@ -22,9 +22,9 @@ footer { background: #DDDDDD; border-radius: 5px 5px 0px 0px; }
 
 .text-box { grid-column: 8 / 12; grid-row: 2 / 4; }
 
-.text-box-text { position: relative; width: 300.93px; font-family: 'Source Sans Pro', sans-serif; font-style: normal; letter-spacing: -0.2px; height: 156px; font-weight: 400; font-size: 18px; line-height: 26px; color: #484A4C; align-items: center; top: 20px; }
+.text-box-text { width: 300.93px; font-family: 'Source Sans Pro', sans-serif; font-style: normal; letter-spacing: -0.2px; height: 156px; font-weight: 400; font-size: 18px; line-height: 26px; color: #484A4C; align-items: center; top: 20px; }
 
-h1 { position: relative; width: 300.93px; font-family: 'Source Sans Pro', sans-serif; font-style: normal; letter-spacing: -0.2px; height: 120px; font-weight: 700; font-size: 32px; line-height: 37px; color: #134880; display: flex; align-items: flex-end; }
+h1 { width: 300.93px; font-family: 'Source Sans Pro', sans-serif; font-style: normal; letter-spacing: -0.2px; height: 120px; font-weight: 700; font-size: 32px; line-height: 37px; color: #134880; display: flex; align-items: flex-end; }
 
 .picture-row-1 { grid-row: 2 / 4; grid-column: 6 / 8; }
 
@@ -32,12 +32,12 @@ h1 { position: relative; width: 300.93px; font-family: 'Source Sans Pro', sans-s
 
 img { position: relative; display: inline-block; height: 200px; border-radius: 5px; margin-left: 10px; }
 
-.arrow-left { background: url("../Assets/arrow-gray-left.png") no-repeat; background-position: center; position: relative; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #DDDDDD; border-radius: 5px; }
+.arrow-left { background-position: center; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #DDDDDD; border-radius: 5px; background: url("../Assets/arrow-gray-left.png") no-repeat; background-position: center; }
 
-.arrow-left:hover { background: url("../Assets/arrow-blue-left.png") no-repeat; background-position: center; position: relative; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #134880; border-radius: 5px; }
+.arrow-left:hover { background-position: center; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #134880; border-radius: 5px; background: url("../Assets/arrow-blue-left.png") no-repeat; background-position: center; }
 
-.arrow-right { background: url("../Assets/arrow-gray-right.png") no-repeat; background-position: center; position: relative; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #DDDDDD; border-radius: 5px; }
+.arrow-right { background-position: center; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #DDDDDD; border-radius: 5px; background: url("../Assets/arrow-gray-right.png") no-repeat; background-position: center; }
 
-.arrow-right:hover { background: url("../Assets/arrow-blue-right.png") no-repeat; background-position: center; position: relative; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #134880; border-radius: 5px; }
+.arrow-right:hover { background-position: center; width: 60px; height: 60px; margin-bottom: 10px; border: 1px solid #134880; border-radius: 5px; background: url("../Assets/arrow-blue-right.png") no-repeat; background-position: center; }
 
 .arrows { grid-column: 7 / 8; grid-row-start: 3; }

@@ -1,95 +1,39 @@
-%headerChunks{
-    position: absolute;
-    height: 100px;
-    background: #DDDDDD;
-    border-radius: 0px 0px 5px 5px;
-}
-
-%hf{
-    position: relative;
-    width: 941px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-%hfElems{
-    position: absolute;
-    width: 245px;
-    height: 18px;
-    font-family: HelveticaNeue;
-    font-size: 15px;
-    line-height: 18px;
-    color: #FFFFFF;
-}
-
-%pictureRows {
-    height: 200px;
-    font-size: 0px;
-    direction: rtl;
-    white-space: nowrap;
-    clip-path: inset( 0vw 0vw 0vw -60vw );
-}
-
-@mixin sspText($fw, $fs, $lh, $h, $color) {
-    position: relative;
-    width: 300.93px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: normal;
-    letter-spacing: -0.2px;
-    
-    height: $h;
-    font-weight: $fw;
-    font-size: $fs;
-    line-height: $lh;
-    color: $color;
-}
-
-@mixin buttonTheme($btnTheme){
-    background-position: center;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    border: 1px solid $btnTheme;
-    border-radius: 5px;
-}
-
-//---------
+@import 'variables.scss';
 
 * {
     margin: 0px;
 }
 
 header {
-    @extend %hf;
+    @extend .hf;
 }
 
 .header-left {
-    @extend %headerChunks;
-    width: 301px;
+    @extend .header-chunks;
+    width: 300px;
 }
 
 .header-right {
-    @extend %headerChunks;
+    @extend .header-chunks;
     width: 621px;
     left: 320px;
 }
 
 
 .header-elements {
-    @extend %hfElems;
+    @extend .hfElems;
     left: 80px;
     top: 39px;
 }
 
 footer {
-    @extend %hf;
-    background: #DDDDDD;
+    @extend .hf;
+    background: $fgColor;
     border-radius: 5px 5px 0px 0px;
 }
 
 .footer-elements {
-    @extend %hfElems;
+    @extend .hfElems;
     left: 81px;
     top: 42px;
     display: flex;
@@ -98,7 +42,7 @@ footer {
 }
 
 .grid-container {
-    @extend %hf;
+    @extend .hf;
     height: 530px;
     display: grid;
     grid-template-columns: repeat(12, 60px);
@@ -112,32 +56,32 @@ footer {
 }
 
 .text-box-text {
-    @include sspText(400, 18px, 26px, 156px, #484A4C);
+    @include sspText(400, 18px, 26px, 156px, $txtColor);
     align-items: center;
     top: 20px;
 }
 
 h1 {
-    @include sspText(700, 32px, 37px, 120px, #134880);
+    @include sspText(700, 32px, 37px, 120px, $btnSelectedColor);
     display: flex;
     align-items: flex-end;
 
 }
 
 .picture-row-1 {
-    @extend %pictureRows;
+    @extend .picture-rows;
     grid-row: 2 / 4;
     grid-column: 6 / 8;
 }
 
 .picture-row-2 {
-    @extend %pictureRows;
+    @extend .picture-rows;
     grid-row: 3 / 5;
     grid-column: 4 / 6;
 }
 
 img {
-    position: relative;
+	position: relative;
     display: inline-block;
     height: 200px;
     border-radius: 5px;
@@ -145,23 +89,19 @@ img {
 }
 
 .arrow-left {
-    background: url("../Assets/arrow-gray-left.png") no-repeat;
-    @include buttonTheme($btnTheme:#DDDDDD);
+    @include buttonTheme($fgColor, $arrowLG);
 }
 
 .arrow-left:hover{
-    background: url("../Assets/arrow-blue-left.png") no-repeat;
-    @include buttonTheme($btnTheme:#134880);
+    @include buttonTheme($btnSelectedColor, $arrowLB);
 }
 
 .arrow-right {
-    background: url("../Assets/arrow-gray-right.png") no-repeat;
-    @include buttonTheme($btnTheme:#DDDDDD);
+    @include buttonTheme($fgColor, $arrowRG);
 }
 
 .arrow-right:hover{
-    background: url("../Assets/arrow-blue-right.png") no-repeat;
-    @include buttonTheme($btnTheme:#134880);
+    @include buttonTheme($btnSelectedColor, $arrowRB);
 }
 
 .arrows{

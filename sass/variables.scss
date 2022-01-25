@@ -1,0 +1,64 @@
+$fgColor: #DDDDDD;
+$btnSelectedColor: #134880;
+$txtColor: #484A4C;
+
+$arrowRG: url("../Assets/arrow-gray-right.png") no-repeat;
+$arrowRB: url("../Assets/arrow-blue-right.png") no-repeat;
+$arrowLG: url("../Assets/arrow-gray-left.png") no-repeat;
+$arrowLB: url("../Assets/arrow-blue-left.png") no-repeat;
+
+.header-chunks{
+    position: absolute;
+    height: 100px;
+    background: $fgColor;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.hf{
+    position: relative;
+    width: 941px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.hfElems{
+    position: absolute;
+    width: 245px;
+    height: 18px;
+    font-family: HelveticaNeue;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.picture-rows {
+    height: 200px;
+    font-size: 0px;
+    direction: rtl;
+    white-space: nowrap;
+    clip-path: inset( 0vw 0vw 0vw -60vw );
+}
+
+@mixin sspText($fw, $fs, $lh, $h, $color) {
+    width: 300.93px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    
+    height: $h;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin buttonTheme($btnTheme, $btnImg){
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 1px solid $btnTheme;
+    border-radius: 5px;
+    background: $btnImg;
+    background-position: center;
+}
