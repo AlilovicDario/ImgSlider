@@ -1,0 +1,23 @@
+@mixin sspText($fw, $fs, $lh, $h, $color) {
+    width: 300.93px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    
+    height: $h;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin buttonTheme($btnTheme, $btnImg){
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 1px solid $btnTheme;
+    border-radius: 5px;
+    background: $btnImg;
+    background-position: center;
+}

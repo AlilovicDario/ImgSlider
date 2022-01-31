@@ -1,7 +1,0 @@
-.header-chunks { position: absolute; height: 100px; background: #DDDDDD; border-radius: 0px 0px 5px 5px; }
-
-.hf { position: relative; width: 941px; height: 100px; margin: 0 auto; }
-
-.hfElems { position: absolute; width: 245px; height: 18px; font-family: HelveticaNeue; font-size: 15px; line-height: 18px; color: #FFFFFF; }
-
-.picture-rows { height: 200px; font-size: 0px; direction: rtl; white-space: nowrap; clip-path: inset(0vw 0vw 0vw -60vw); }
